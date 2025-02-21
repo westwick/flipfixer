@@ -5,7 +5,7 @@
   >
     <div class="w-2/5 mr-[5%] relative">
       <h1 class="text-4xl font-bold mb-16 text-white glowy-text">
-        ORIGIN OF THE ROAR
+        ORIGIN OF THE ROAR!
       </h1>
 
       <div class="flex flex-col gap-12">
