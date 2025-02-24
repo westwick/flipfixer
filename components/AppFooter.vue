@@ -7,7 +7,7 @@
           <h3 class="text-xl font-semibold mb-4 text-[#f08330]">
             About Flip Fixer
           </h3>
-          <p class="text-gray-300 leading-relaxed">
+          <p class="text-gray-300 leading-relaxed text-sm">
             With over 20 years of hands-on experience, we're San Antonio's
             trusted partner for home improvements and renovations. Our
             commitment to quality craftsmanship and customer satisfaction sets
@@ -20,13 +20,12 @@
           <h3 class="text-xl font-semibold mb-4 text-[#f08330]">
             Service Areas
           </h3>
-          <ul class="text-gray-300 space-y-2">
-            <li>San Antonio</li>
-            <li>New Braunfels</li>
-            <li>Schertz</li>
-            <li>Cibolo</li>
-            <li>Boerne</li>
-          </ul>
+          <p class="text-gray-300 text-sm">
+            San Antonio <span class="text-gray-600 px-1">▪</span> New Braunfels
+            <span class="text-gray-600 px-1">▪</span> Schertz
+            <span class="text-gray-600 px-1">▪</span> Cibolo
+            <span class="text-gray-600 px-1">▪</span> Boerne
+          </p>
         </div>
 
         <!-- Contact Info -->
