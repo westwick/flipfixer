@@ -178,7 +178,7 @@ import {
 } from "lucide-vue-next";
 
 useHead({
-  title: "FlipFixer - Professional Home Improvement Services",
+  title: "Professional Home Improvement Services",
   meta: [
     {
       name: "description",
