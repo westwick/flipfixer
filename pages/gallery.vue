@@ -14,27 +14,21 @@
       </div>
     </div>
 
-    <!-- Before & After Section -->
+    <!-- Before & After Section with Sliders -->
     <section class="py-16 px-4">
       <div class="container mx-auto max-w-6xl">
         <h2 class="text-3xl font-bold text-[#f08330] text-center mb-12">
           Before & After Transformations
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="gallery-card group">
-            <div class="relative overflow-hidden">
-              <img
-                src="https://placehold.co/800x600/f08330/white?text=Kitchen"
-                alt="Kitchen Transformation"
-                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div
-                class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              >
-                <Kitchen class="w-12 h-12 text-white" />
-              </div>
-            </div>
-            <div class="p-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div>
+            <BeforeAfterSlider
+              :beforeImage="beforeImage"
+              :afterImage="afterImage"
+              beforeAlt="Kitchen Before Renovation"
+              afterAlt="Kitchen After Renovation"
+            />
+            <div class="p-6 bg-[#1a1d20] border border-[#2d3238] rounded-b-lg">
               <h3 class="text-xl font-semibold mb-3">Kitchen Overhauls</h3>
               <p class="text-gray-300">
                 See how we've turned outdated kitchens into modern culinary
@@ -43,46 +37,18 @@
             </div>
           </div>
 
-          <div class="gallery-card group">
-            <div class="relative overflow-hidden">
-              <img
-                src="https://placehold.co/800x600/f08330/white?text=Bathroom"
-                alt="Bathroom Transformation"
-                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div
-                class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              >
-                <Shower class="w-12 h-12 text-white" />
-              </div>
-            </div>
-            <div class="p-6">
+          <div>
+            <BeforeAfterSlider
+              beforeImage="https://placehold.co/800x600/333/white?text=Bathroom+Before"
+              afterImage="https://placehold.co/800x600/f08330/white?text=Bathroom+After"
+              beforeAlt="Bathroom Before Renovation"
+              afterAlt="Bathroom After Renovation"
+            />
+            <div class="p-6 bg-[#1a1d20] border border-[#2d3238] rounded-b-lg">
               <h3 class="text-xl font-semibold mb-3">Bathroom Upgrades</h3>
               <p class="text-gray-300">
                 Check out our sleek tile work, updated vanities, and
                 contemporary fixtures.
-              </p>
-            </div>
-          </div>
-
-          <div class="gallery-card group">
-            <div class="relative overflow-hidden">
-              <img
-                src="https://placehold.co/800x600/f08330/white?text=Exterior"
-                alt="Exterior Transformation"
-                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div
-                class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              >
-                <Home class="w-12 h-12 text-white" />
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-semibold mb-3">Exterior Improvements</h3>
-              <p class="text-gray-300">
-                Discover the power of fresh paint, new siding, and roof repairs
-                in boosting curb appeal.
               </p>
             </div>
           </div>
@@ -246,6 +212,10 @@ import {
   ChevronRight,
 } from "lucide-vue-next";
 import { ref, onMounted, onUnmounted } from "vue";
+import BeforeAfterSlider from "~/components/BeforeAfterSlider.vue";
+
+import beforeImage from "@/assets/images/kitchenbefore.jpg";
+import afterImage from "@/assets/images/kitchenafter.jpg";
 
 // Sample project images - replace with actual project images
 const projectImages = [

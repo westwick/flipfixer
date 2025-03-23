@@ -60,7 +60,7 @@ body {
   min-height: 70vh;
   max-width: 100%;
   overflow-x: hidden;
-  margin-top: 104px;
+  margin-top: 88px;
 }
 
 .page-enter-active,

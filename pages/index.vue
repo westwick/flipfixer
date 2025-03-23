@@ -115,6 +115,71 @@
             </div>
           </div>
         </div>
+
+        <!-- View All Services Button -->
+        <div class="text-center mt-12">
+          <NuxtLink to="/services">
+            <button class="outline-button px-8 py-4 text-lg rounded-lg">
+              View All Services
+              <ChevronRight class="inline-block ml-2" size="20" />
+            </button>
+          </NuxtLink>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Work Samples Section -->
+    <section
+      class="work-samples py-16 px-4 showcase-divider"
+      style="background-color: #1c1e22; position: relative"
+    >
+      <div class="container mx-auto max-w-5xl">
+        <h2 class="text-3xl font-bold text-center mb-12 text-[#f08330]">
+          Our Work Showcase
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="gallery-preview">
+            <img
+              src="~/assets/images/kitchen2.jpg"
+              alt="Kitchen Remodel"
+              class="w-full h-80 object-cover rounded-lg"
+            />
+          </div>
+
+          <div class="gallery-preview">
+            <img
+              src="~/assets/images/flooring.jpg"
+              alt="Flooring Project"
+              class="w-full h-80 object-cover rounded-lg"
+            />
+          </div>
+
+          <div class="gallery-preview">
+            <img
+              src="~/assets/images/flooring.jpg"
+              alt="Bathroom Project"
+              class="w-full h-80 object-cover rounded-lg"
+            />
+          </div>
+
+          <div class="gallery-preview">
+            <img
+              src="~/assets/images/flooring.jpg"
+              alt="Exterior Project"
+              class="w-full h-80 object-cover rounded-lg"
+            />
+          </div>
+        </div>
+
+        <!-- Gallery Link Button -->
+        <div class="text-center mt-12">
+          <NuxtLink to="/gallery">
+            <button class="outline-button px-8 py-4 text-lg rounded-lg">
+              View Full Gallery
+              <ChevronRight class="inline-block ml-2" size="20" />
+            </button>
+          </NuxtLink>
+        </div>
       </div>
     </section>
 
@@ -175,6 +240,7 @@ import {
   TreePalm,
   PencilRuler,
   ShowerHead,
+  ChevronRight,
 } from "lucide-vue-next";
 
 useHead({
@@ -212,7 +278,7 @@ useHead({
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.78); /* Dark overlay */
+  background-color: rgba(0, 0, 0, 0.665); /* Dark overlay */
   z-index: 1;
 }
 
@@ -340,5 +406,131 @@ p {
 .service-card:hover {
   transform: none;
   box-shadow: none;
+}
+
+.gallery-preview {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: #0b0c0c;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-preview img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.gallery-preview:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-preview h3 {
+  color: #f08330;
+  text-align: center;
+  padding: 0 1rem 1.5rem;
+}
+
+.outline-button {
+  background-color: transparent;
+  color: #f08330;
+  font-weight: 600;
+  border: 2px solid #f08330;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outline-button:hover {
+  background-color: rgba(240, 131, 48, 0.1);
+  transform: translateY(-2px);
+}
+
+.showcase-bg {
+  background: linear-gradient(to bottom, #131517, #1a1c1e, #131517);
+  position: relative;
+}
+
+.showcase-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(240, 131, 48, 0.3),
+    transparent
+  );
+}
+
+.showcase-bg::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(240, 131, 48, 0.3),
+    transparent
+  );
+}
+
+.showcase-image-bg {
+  background-image: url("assets/images/pattern-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.showcase-image-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(19, 21, 23, 0.92);
+  z-index: 1;
+}
+
+.showcase-image-bg > div {
+  position: relative;
+  z-index: 2;
+}
+
+.showcase-divider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(240, 131, 48, 0.3),
+    transparent
+  );
+}
+
+.showcase-divider::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(240, 131, 48, 0.3),
+    transparent
+  );
 }
 </style>

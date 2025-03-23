@@ -23,7 +23,7 @@
           <div class="service-card">
             <div class="relative">
               <img
-                src="https://placehold.co/800x400/f08330/white?text=Kitchen+%26+Bath"
+                src="~/assets/images/kitchen2.jpg"
                 alt="Kitchen & Bath"
                 class="w-full h-48 object-cover"
               />
@@ -42,11 +42,10 @@
           <div class="service-card">
             <div class="relative">
               <img
-                src="https://placehold.co/800x400/f08330/white?text=Flooring"
+                src="~/assets/images/flooring.jpg"
                 alt="Flooring"
                 class="w-full h-48 object-cover"
               />
-              <Home class="absolute bottom-4 right-4 w-8 h-8 text-white" />
             </div>
             <div class="p-6">
               <h3 class="text-xl font-semibold mb-3">Flooring & Finishes</h3>
@@ -59,7 +58,7 @@
           <div class="service-card">
             <div class="relative">
               <img
-                src="https://placehold.co/800x400/f08330/white?text=Paint"
+                src="~/assets/images/painter.jpg"
                 alt="Paint"
                 class="w-full h-48 object-cover"
               />
@@ -124,11 +123,10 @@
           <div class="service-card">
             <div class="relative">
               <img
-                src="https://placehold.co/800x400/f08330/white?text=Small+Repairs"
+                src="~/assets/images/punchout.jpg"
                 alt="Small Repairs"
                 class="w-full h-48 object-cover"
               />
-              <Wrench class="absolute bottom-4 right-4 w-8 h-8 text-white" />
             </div>
             <div class="p-6">
               <h3 class="text-xl font-semibold mb-3">Small Repairs</h3>
@@ -141,11 +139,10 @@
           <div class="service-card">
             <div class="relative">
               <img
-                src="https://placehold.co/800x400/f08330/white?text=Punch+Out"
+                src="~/assets/images/repair.jpg"
                 alt="Punch-Out Lists"
                 class="w-full h-48 object-cover"
               />
-              <Hammer class="absolute bottom-4 right-4 w-8 h-8 text-white" />
             </div>
             <div class="p-6">
               <h3 class="text-xl font-semibold mb-3">Punch-Out Lists</h3>
@@ -158,11 +155,10 @@
           <div class="service-card">
             <div class="relative">
               <img
-                src="https://placehold.co/800x400/f08330/white?text=Installation"
+                src="~/assets/images/installer.jpg"
                 alt="Appliance Installation"
                 class="w-full h-48 object-cover"
               />
-              <Tv class="absolute bottom-4 right-4 w-8 h-8 text-white" />
             </div>
             <div class="p-6">
               <h3 class="text-xl font-semibold mb-3">Appliance Installation</h3>
