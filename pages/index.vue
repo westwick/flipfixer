@@ -482,7 +482,7 @@ p {
 }
 
 .showcase-image-bg {
-  background-image: url("assets/images/pattern-bg.jpg");
+  /*background-image: url("assets/images/pattern-bg.jpg");*/
   background-size: cover;
   background-position: center;
   position: relative;
