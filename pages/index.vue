@@ -156,7 +156,7 @@
 
           <div class="gallery-preview">
             <img
-              src="~/assets/images/flooring.jpg"
+              src="~/assets/images/staircase.jpg"
               alt="Bathroom Project"
               class="w-full h-80 object-cover rounded-lg"
             />
@@ -164,7 +164,7 @@
 
           <div class="gallery-preview">
             <img
-              src="~/assets/images/flooring.jpg"
+              src="~/assets/images/patio.jpg"
               alt="Exterior Project"
               class="w-full h-80 object-cover rounded-lg"
             />

@@ -20,8 +20,8 @@
         <h2 class="text-3xl font-bold text-[#f08330] text-center mb-12">
           Before & After Transformations
         </h2>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          <div>
+        <div class="flex justify-center">
+          <div class="max-w-2xl w-full">
             <BeforeAfterSlider
               :beforeImage="beforeImage"
               :afterImage="afterImage"
@@ -31,24 +31,7 @@
             <div class="p-6 bg-[#1a1d20] border border-[#2d3238] rounded-b-lg">
               <h3 class="text-xl font-semibold mb-3">Kitchen Overhauls</h3>
               <p class="text-gray-300">
-                See how we've turned outdated kitchens into modern culinary
-                spaces.
-              </p>
-            </div>
-          </div>
-
-          <div>
-            <BeforeAfterSlider
-              beforeImage="https://placehold.co/800x600/333/white?text=Bathroom+Before"
-              afterImage="https://placehold.co/800x600/f08330/white?text=Bathroom+After"
-              beforeAlt="Bathroom Before Renovation"
-              afterAlt="Bathroom After Renovation"
-            />
-            <div class="p-6 bg-[#1a1d20] border border-[#2d3238] rounded-b-lg">
-              <h3 class="text-xl font-semibold mb-3">Bathroom Upgrades</h3>
-              <p class="text-gray-300">
-                Check out our sleek tile work, updated vanities, and
-                contemporary fixtures.
+                See how we turn outdated kitchens into modern culinary spaces.
               </p>
             </div>
           </div>
@@ -66,7 +49,7 @@
           <div class="spotlight-card group">
             <div class="relative overflow-hidden">
               <img
-                src="https://placehold.co/1200x800/f08330/white?text=Complete+Renovation"
+                src="~/assets/images/patio1.jpg"
                 alt="Complete Home Renovation"
                 class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -77,12 +60,10 @@
               </div>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold mb-3">
-                Complete Home Renovations
-              </h3>
+              <h3 class="text-xl font-semibold mb-3">Backyard Patio</h3>
               <p class="text-gray-300">
-                We'll highlight a few notable projects where we handled every
-                aspect—design to final touches.
+                An outdoor transformation featuring custom woodwork and a hidden
+                firepit.
               </p>
             </div>
           </div>
@@ -90,7 +71,7 @@
           <div class="spotlight-card group">
             <div class="relative overflow-hidden">
               <img
-                src="https://placehold.co/1200x800/f08330/white?text=Custom+Work"
+                src="~/assets/images/kitchen4.jpg"
                 alt="Custom Creations"
                 class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -101,10 +82,11 @@
               </div>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold mb-3">Custom Creations</h3>
+              <h3 class="text-xl font-semibold mb-3">Kitchen Overhaul</h3>
               <p class="text-gray-300">
-                Show off special projects like custom furniture pieces,
-                pet-friendly installations, or artistic finishes.
+                A complete kitchen transformation featuring custom cabinetry,
+                quartz countertops, and modern appliances that creates the
+                perfect cooking and entertaining space.
               </p>
             </div>
           </div>
@@ -174,7 +156,7 @@
             class="max-h-[80vh] w-auto mx-auto"
           />
           <p class="text-white text-center mt-4">
-            {{ projectImages[selectedImage]?.description }}
+            <!-- {{ projectImages[selectedImage]?.description }} -->
           </p>
         </div>
       </div>
@@ -216,53 +198,43 @@ import BeforeAfterSlider from "~/components/BeforeAfterSlider.vue";
 
 import beforeImage from "@/assets/images/kitchenbefore.jpg";
 import afterImage from "@/assets/images/kitchenafter.jpg";
-
+import kitchen1Image from "@/assets/images/kitchen1.jpg";
+import kitchen3Image from "@/assets/images/kitchen3.jpg";
+import kitchen4Image from "@/assets/images/kitchen4.jpg";
+import patio2Image from "@/assets/images/patio2.jpg";
+import laundryImage from "@/assets/images/laundry.jpg";
+import bathroom1Image from "@/assets/images/bathroom1.jpg";
 // Sample project images - replace with actual project images
 const projectImages = [
   {
-    src: "https://placehold.co/600x800/f08330/white?text=Kitchen+1",
+    src: kitchen4Image,
     alt: "Modern Kitchen Renovation",
     description: "Complete kitchen remodel with custom cabinets and island",
   },
   {
-    src: "https://placehold.co/800x600/f08330/white?text=Bathroom+1",
+    src: bathroom1Image,
     alt: "Luxury Bathroom",
     description: "Master bathroom renovation with custom tile work",
   },
   {
-    src: "https://placehold.co/600x900/f08330/white?text=Living+Room",
+    src: patio2Image,
     alt: "Living Room Transformation",
     description: "Open concept living room with custom built-ins",
   },
   {
-    src: "https://placehold.co/900x600/f08330/white?text=Exterior+1",
+    src: kitchen1Image,
     alt: "Home Exterior",
     description: "Complete exterior renovation with new siding and windows",
   },
   {
-    src: "https://placehold.co/600x600/f08330/white?text=Custom+Work+1",
-    alt: "Custom Carpentry",
-    description: "Custom built entertainment center with hidden storage",
-  },
-  {
-    src: "https://placehold.co/800x1000/f08330/white?text=Deck",
-    alt: "Outdoor Living",
-    description: "Custom deck with built-in seating and pergola",
-  },
-  {
-    src: "https://placehold.co/700x500/f08330/white?text=Small+Project",
+    src: kitchen3Image,
     alt: "Small Project",
     description: "Quick turnaround bathroom update",
   },
   {
-    src: "https://placehold.co/600x800/f08330/white?text=Kitchen+2",
+    src: laundryImage,
     alt: "Kitchen Update",
     description: "Kitchen refresh with new countertops and backsplash",
-  },
-  {
-    src: "https://placehold.co/800x800/f08330/white?text=Custom+Work+2",
-    alt: "Custom Work",
-    description: "Custom built-in office space with storage solutions",
   },
 ];
 
