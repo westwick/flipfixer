@@ -140,32 +140,32 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="gallery-preview">
             <img
-              src="~/assets/images/kitchen2.jpg"
-              alt="Kitchen Remodel"
+              src="~/assets/images/gallery-01-modern-farmhouse-blue-accent-wall-wood-beam.jpg"
+              alt="Modern farmhouse kitchen remodel"
               class="w-full h-80 object-cover rounded-lg"
             />
           </div>
 
           <div class="gallery-preview">
             <img
-              src="~/assets/images/flooring.jpg"
-              alt="Flooring Project"
+              src="~/assets/images/gallery-04-taupe-cabinets-herringbone-floor.jpg"
+              alt="Kitchen with herringbone floor"
               class="w-full h-80 object-cover rounded-lg"
             />
           </div>
 
           <div class="gallery-preview">
             <img
-              src="~/assets/images/staircase.jpg"
-              alt="Bathroom Project"
+              src="~/assets/images/gallery-03-charcoal-shaker-cabinets-black-subway-tile.jpg"
+              alt="Charcoal shaker kitchen remodel"
               class="w-full h-80 object-cover rounded-lg"
             />
           </div>
 
           <div class="gallery-preview">
             <img
-              src="~/assets/images/patio.jpg"
-              alt="Exterior Project"
+              src="~/assets/images/gallery-12-walk-in-shower-stone-mosaic.jpg"
+              alt="Custom walk-in shower remodel"
               class="w-full h-80 object-cover rounded-lg"
             />
           </div>

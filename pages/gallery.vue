@@ -49,8 +49,8 @@
           <div class="spotlight-card group">
             <div class="relative overflow-hidden">
               <img
-                src="~/assets/images/patio1.jpg"
-                alt="Complete Home Renovation"
+                src="~/assets/images/gallery-11-spa-tub-pebble-walk-in-shower.jpg"
+                alt="Spa bathroom with soaking tub and walk-in shower"
                 class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div
@@ -60,10 +60,10 @@
               </div>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold mb-3">Backyard Patio</h3>
+              <h3 class="text-xl font-semibold mb-3">Spa Bathroom Remodel</h3>
               <p class="text-gray-300">
-                An outdoor transformation featuring custom woodwork and a hidden
-                firepit.
+                Jetted soaking tub under an arched window plus a walk-in shower
+                with pebble flooring and frameless glass.
               </p>
             </div>
           </div>
@@ -71,8 +71,8 @@
           <div class="spotlight-card group">
             <div class="relative overflow-hidden">
               <img
-                src="~/assets/images/kitchen4.jpg"
-                alt="Custom Creations"
+                src="~/assets/images/gallery-01-modern-farmhouse-blue-accent-wall-wood-beam.jpg"
+                alt="Modern farmhouse kitchen remodel"
                 class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div
@@ -82,11 +82,10 @@
               </div>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold mb-3">Kitchen Overhaul</h3>
+              <h3 class="text-xl font-semibold mb-3">Modern Farmhouse Kitchen</h3>
               <p class="text-gray-300">
-                A complete kitchen transformation featuring custom cabinetry,
-                quartz countertops, and modern appliances that creates the
-                perfect cooking and entertaining space.
+                Quartz waterfall island, exposed wood beam ceiling, and a bold blue
+                accent wall in a San Antonio kitchen remodel.
               </p>
             </div>
           </div>
@@ -198,45 +197,31 @@ import BeforeAfterSlider from "~/components/BeforeAfterSlider.vue";
 
 import beforeImage from "@/assets/images/kitchenbefore.jpg";
 import afterImage from "@/assets/images/kitchenafter.jpg";
-import kitchen1Image from "@/assets/images/kitchen1.jpg";
-import kitchen3Image from "@/assets/images/kitchen3.jpg";
-import kitchen4Image from "@/assets/images/kitchen4.jpg";
-import patio2Image from "@/assets/images/patio2.jpg";
-import laundryImage from "@/assets/images/laundry.jpg";
-import bathroom1Image from "@/assets/images/bathroom1.jpg";
-// Sample project images - replace with actual project images
-const projectImages = [
-  {
-    src: kitchen4Image,
-    alt: "Modern Kitchen Renovation",
-    description: "Complete kitchen remodel with custom cabinets and island",
-  },
-  {
-    src: bathroom1Image,
-    alt: "Luxury Bathroom",
-    description: "Master bathroom renovation with custom tile work",
-  },
-  {
-    src: patio2Image,
-    alt: "Living Room Transformation",
-    description: "Open concept living room with custom built-ins",
-  },
-  {
-    src: kitchen1Image,
-    alt: "Home Exterior",
-    description: "Complete exterior renovation with new siding and windows",
-  },
-  {
-    src: kitchen3Image,
-    alt: "Small Project",
-    description: "Quick turnaround bathroom update",
-  },
-  {
-    src: laundryImage,
-    alt: "Kitchen Update",
-    description: "Kitchen refresh with new countertops and backsplash",
-  },
-];
+
+const galleryModules = import.meta.glob("@/assets/images/gallery-*.jpg", {
+  eager: true,
+  import: "default",
+});
+
+const titleFromGalleryPath = (path) => {
+  const file = path.split("/").pop().replace(/^gallery-\d+-/, "").replace(/\.jpg$/, "");
+  return file
+    .split("-")
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+};
+
+const projectImages = Object.entries(galleryModules)
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([path, src]) => {
+    const title = titleFromGalleryPath(path);
+    return {
+      src,
+      alt: `Flip Fixer ${title}`,
+      description: title,
+    };
+  });
 
 const selectedImage = ref(null);
 
